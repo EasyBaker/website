@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h2>My Games</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games..." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="https://joezeng.github.io/fairdyne/">Undyne</a></li>
+  <li><a href="https://play.typeracer.com/">Typeracer</a></li>
+
+  <li><a href="https://www.ducksters.com/games/tetris.php">Tetris</a></li>
+  <li><a href="https://www.google.com/search?q=snake+game&oq=snake+game&aqs=chrome..69i57j0l5.1546j0j7&sourceid=chrome&ie=UTF-8">Snake</a></li>
+
+  <li><a href="https://www.google.com/search?safe=strict&sxsrf=ACYBGNTgUu7gNhtM8TgLcJxoSIYu0_QUDw%3A1571627777817&ei=ASOtXefCMYbn_QaHoJvoBQ&q=minesweeper+game&oq=minesweeper+game&gs_l=psy-ab.3..0l9j0i20i263.7077.7575..7731...0.2..0.86.407.5......0....1..gws-wiz.......0i71j0i131.85dpkTS5vMI&ved=0ahUKEwinx6nbsazlAhWGc98KHQfQBl0Q4dUDCAs&uact=5">Minesweeper</a></li>
+  <li><a href="https://joezeng.github.io/endless-sans/">Endless Sans</a></li>
+  <li><a href="https://joezeng.github.io/gc2/">Goomy Clicker 2</a></li>
+  <li><a href="https://joezeng.github.io/144/">144</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

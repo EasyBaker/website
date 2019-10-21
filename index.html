@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+  <h1>Image Mapped Games</h1>
+  <p>Click on images to get taken to games</p>
+  <p>Going to change this to SVG whenever I find the time to, JavaScript image-map resizer wasn't working.<p>
+  <p><a href="list.html">Easier way to view games</a></p>
+  <img src="images/background.jpg" alt="Background" usemap="#workmap" >
+
+
+  <map name="workmap">
+    <area shape="rect" coords="30,660,200,885" alt="Undyne" href="https://joezeng.github.io/fairdyne/">
+    <area shape="rect" coords="3360,85,3620,270" alt="Typeracer" href="https://play.typeracer.com/">
+    <!-- <area shape="rect" coords="3438,2938,3839,2159" alt="Tetris" href="https://www.ducksters.com/games/tetris.php">!> -->
+    <area shape="rect" coords="2050,1300,2280,1585" alt="Snake" href="https://www.google.com/search?q=snake+game&oq=snake+game&aqs=chrome..69i57j0l5.1546j0j7&sourceid=chrome&ie=UTF-8">
+    <area shape="rect" coords="1300,1130,1550,1350" alt="Minesweeper" href="https://www.google.com/search?safe=strict&sxsrf=ACYBGNTgUu7gNhtM8TgLcJxoSIYu0_QUDw%3A1571627777817&ei=ASOtXefCMYbn_QaHoJvoBQ&q=minesweeper+game&oq=minesweeper+game&gs_l=psy-ab.3..0l9j0i20i263.7077.7575..7731...0.2..0.86.407.5......0....1..gws-wiz.......0i71j0i131.85dpkTS5vMI&ved=0ahUKEwinx6nbsazlAhWGc98KHQfQBl0Q4dUDCAs&uact=5">
+  </map>
+  <script src="stuff/imageMapResizer.js"></script>
+  <script type="text/javascript">
+
+    $('map').imageMapResize();
+
+  </script>
+</body>
+</html>
